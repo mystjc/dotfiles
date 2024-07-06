@@ -1,4 +1,4 @@
 
-## Dotfiles
+## About
 
-This repository contains my personal collection of configs for various tools and applications.
+This repository contains a collection of configs for the various tools and applications I use.
