@@ -7,7 +7,7 @@ This repository offers a collection of configurations for a variety of applicati
 
 ## Installation
 
-Install Stow and clone the repository:
+Install Stow and clone the repository to `~/dotfiles`:
 
 ```shell
 
@@ -26,11 +26,10 @@ yay -S fastfetch fzf lsd bat lf
 
 ```
 
-Then, run stow to create symlinks of the dotfiles!
+Then, run stow within `~/dotfiles` to create the symlinks!
 
 ```shell
 
-cd dotfiles
 stow .
 
 ```
