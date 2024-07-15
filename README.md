@@ -16,4 +16,23 @@ git clone https://github.com/mystjc/dotfiles.git && cd dotfiles
 
 ```
 
-Afterwards, make sure to install the necessary programs. Then run the stow command to create symlinks of the files!
+Afterwards, make sure to install the necessary programs:
+
+```shell
+
+sudo pacman -S yay
+yay -S fish kitty wezterm
+yay -S fastfetch fzf lsd bat lf
+
+```
+
+Then, run stow to create symlinks of the dotfiles!
+
+```shell
+
+cd dotfiles
+stow .
+
+```
+
+### Highly recommand this [video](https://youtu.be/y6XCebnB9gs?list=PLgO4Le-rukkJjc45SlAjDi-xtikmoOdUu) by Dreams of Autonomy for additional infomation on using Stow!
