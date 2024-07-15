@@ -26,7 +26,7 @@ yay -S fastfetch fzf lsd bat lf
 
 ```
 
-Then, run stow within `~/dotfiles` to create the symlinks!
+Then, run Stow within `~/dotfiles` to create the symlinks:
 
 ```shell
 
