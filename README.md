@@ -25,7 +25,7 @@ yay -S fastfetch fzf lsd bat lf
 Then, run Stow within `~/dotfiles` to create the symlinks:
 
 ```shell
-stow .
+stow --adopt .
 ```
 
 #### Highly recommand this [video](https://youtu.be/y6XCebnB9gs?list=PLgO4Le-rukkJjc45SlAjDi-xtikmoOdUu) by Dreams of Autonomy for additional infomation on using Stow!
