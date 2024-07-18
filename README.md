@@ -18,7 +18,7 @@ Afterwards, make sure to install the necessary programs:
 
 ```shell
 sudo pacman -S kitty wezterm
-sudo pacman -S bat fastfetch fish fzf lf lsd
+sudo pacman -S bat fastfetch fish fzf lf lsd mangohud
 ```
 
 Then, run Stow within `~/dotfiles` to create the symlinks:
@@ -27,7 +27,7 @@ Then, run Stow within `~/dotfiles` to create the symlinks:
 stow .
 ```
 
-If there is a conflict with pre-existing files:
+If there is a conflict with pre-existing files, use:
 
 ```shell
 stow --adopt .
