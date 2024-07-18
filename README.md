@@ -17,12 +17,17 @@ git clone https://github.com/mystjc/dotfiles.git && cd dotfiles
 Afterwards, make sure to install the necessary programs:
 
 ```shell
-sudo pacman -S yay
-yay -S fish kitty wezterm
-yay -S fastfetch fzf lsd bat lf
+sudo pacman -S kitty wezterm
+sudo pacman -S bat fastfetch fish fzf lf lsd
 ```
 
 Then, run Stow within `~/dotfiles` to create the symlinks:
+
+```shell
+stow .
+```
+
+If there is a conflict with pre-existing files:
 
 ```shell
 stow --adopt .
