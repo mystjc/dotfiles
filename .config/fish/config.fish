@@ -10,6 +10,12 @@
 # Supresses fish's intro message
 set fish_greeting
 
+# Manpager
+set -x MANPAGER "less"
+
+# Starship
+set STARSHIP_CONFIG ""~/.config/starship/starship.toml""
+
 # ALIASES
 
 alias ..='cd ../'
@@ -22,27 +28,38 @@ alias ll='lsd -al'
 alias lt='lsd -d --tree'
 
 alias mkdir='mkdir -v'
-alias rmdir='rm -rvi'
+alias rmdir='rm -rvI'
+alias mk='touch'
+alias rm='rm -vi'
 alias cp='cp -vi'
 alias mv='mv -vi'
-alias rm='rm -vi'
 
-alias cat='bat'
 alias df='df -h'
-alias grep='grep --color=auto'
+alias cat='bat --color=always'
+alias fzf='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
 
 alias nay='yay -Rns'
 alias ope='yay -Rns (yay -Qtdq)'
 
-alias clone='git clone'
+alias git-aliases='rg git ~/dotfiles/.config/fish/'
+
 alias add='git add'
-alias addmod='git add -u'
-alias commit='git commit -m'
-alias fetch='git fetch'
+alias stage='git add --all'
+alias commit='git commit --message'
+alias save='git add --all && git commit --message'
+alias diff='git diff --staged'
+alias revert='git revert'
+
+alias branch='git branch'
+alias delete='git branch --delete'
+alias checkout='git checkout'
+alias merge='git merge'
+alias rebase='git rebase'
+
+alias stats='git status -s'
+alias fetch='git fetch origin'
 alias pull='git pull origin'
 alias push='git push origin'
-alias branch='git branch'
-alias checkout='git checkout'
 
 # FUNCTIONS
 
@@ -59,3 +76,9 @@ function __history_previous_command
     commandline -i !
   end
 end
+
+# Setup Starship, fzf, & zoxide
+starship init fish | source
+fzf --fish | source
+zoxide init --cmd cd fish | source
+zoxide init fish | source
