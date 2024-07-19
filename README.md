@@ -18,7 +18,7 @@ Afterwards, make sure to install the necessary programs:
 
 ```shell
 sudo pacman -S kitty wezterm
-sudo pacman -S bat fastfetch fish fzf lf lsd mangohud
+sudo pacman -S bat fastfetch fish fzf lf lsd mangohud ripgrep zoxide
 ```
 
 Then, run Stow within `~/dotfiles` to create the symlinks:
