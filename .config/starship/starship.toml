@@ -10,9 +10,111 @@
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
-# Disable the blank line at the start of the prompt
-add_newline = false
+format = """
+[╭](bold #34465c)\
+$os\
+$username\
+[ ](fg:#34465c bg:#4586c4)\
+$directory\
+[](fg:#4586c4 bg:#34465c)\
+$git_branch\
+$git_status\
+$c\
+$elixir\
+$elm\
+$golang\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$python\
+$rust\
+$docker_context\
+$time\
+[](fg:#34465c)
+[╰─❯ ](bold #34465c)
+"""
+command_timeout = 5000
 
-format = '''
-[┌─>\[ ](bold green)$directory$rust$package[\]](bold green)
-[└───>](bold green) '''
+# Replace default symbol in the prompt
+[character]
+success_symbol = "[❯](bold #34465c)"
+
+[os]
+disabled = false
+style = "bg:#34465c"
+
+[os.symbols]
+Arch = " "
+EndeavourOS = " "
+
+[username]
+show_always = true
+style_user = "bg:#34465c"
+style_root = "bg:#34465c"
+format = '[ $user ]($style)'
+
+[directory]
+style = "bg:#4586c4"
+format = "[$path ]($style)"
+
+[c]
+symbol = ""
+style = "bg:#34465c"
+format = '[ \[$symbol ($version)\]]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:#34465c"
+format = '[ $symbol $context]($style) $path'
+
+[git_branch]
+symbol = ""
+style = "bg:#34465c"
+format = '[ $symbol $branch]($style)'
+
+[git_status]
+style = "bg:#34465c"
+format = '[ $all_status]($style)'
+
+[golang]
+symbol = ""
+style = "bg:#34465c"
+format = '[ \[$symbol ($version)\]]($style)'
+
+[java]
+symbol = ""
+style = "bg:#34465c"
+format = '[ \[$symbol ($version)\]]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:#34465c"
+format = '[ \[$symbol ($version)\]]($style)'
+
+[lua]
+symbol = "󰢱"
+style = "bg:#34465c"
+format = '[ \[$symbol ($version)\]]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#34465c"
+format = '[ \[$symbol ($version)\]]($style)'
+
+[python]
+symbol = ""
+style = "bg:#34465c"
+format = '[ \[$symbol ($version)\]]($style)'
+
+[rust]
+symbol = "󱘗"
+style = "bg:#34465c"
+format = '[ \[$symbol ($version)\]]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#34465c"
+format = '[  $time ]($style)'
