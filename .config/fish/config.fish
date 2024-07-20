@@ -28,7 +28,7 @@ alias la='lsd -a'
 alias ll='lsd -al'
 alias lt='lsd -d --tree'
 
-alias mkdir='mkdir -v'
+alias mkdir='mkdir -vp'
 alias rmdir='rm -rvI'
 alias mk='touch'
 alias rm='rm -vi'
@@ -88,7 +88,11 @@ function __history_previous_command
 end
 
 # Setup Starship, fzf, & zoxide
+function starship_transient_prompt_func
+  starship module character
+end
 starship init fish | source
+enable_transience
 fzf --fish | source
 zoxide init --cmd cd fish | source
 zoxide init fish | source
