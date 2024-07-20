@@ -17,10 +17,12 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 # ALIASES
 
+# Navigation
 alias ..='cd ../'
 alias ...='cd ../../'
 alias ....='cd ../../../'
 
+# File management
 alias ls='lsd'
 alias la='lsd -a'
 alias ll='lsd -al'
@@ -33,21 +35,14 @@ alias rm='rm -vi'
 alias cp='cp -vi'
 alias mv='mv -vi'
 
-alias df='df -h'
-alias cat='bat --color=always'
-alias fzf='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
-
-alias nay='yay -Rns'
-alias ope='yay -Rns (yay -Qtdq)'
-
-alias git-aliases='rg git ~/dotfiles/.bashrc'
+# Git aliases
+alias git-aliases='rg git ~/dotfiles/.config/fish/'
 
 alias add='git add'
 alias stage='git add --all'
+alias restore='git restore --staged'
 alias commit='git commit --message'
 alias save='git add --all && git commit --message'
-alias diff='git diff --staged'
-alias revert='git revert'
 
 alias branch='git branch'
 alias delete='git branch --delete'
@@ -55,10 +50,26 @@ alias checkout='git checkout'
 alias merge='git merge'
 alias rebase='git rebase'
 
-alias stats='git status -s'
 alias fetch='git fetch origin'
 alias pull='git pull origin'
 alias push='git push origin'
+
+alias stats='git status -s'
+alias log='git log'
+alias diff='git diff --staged'
+alias stash='git stash push'
+alias unstash='git stash pop'
+alias revert='git revert'
+alias unrevert='git cherry-pick'
+alias reset='git reset --hard HEAD~1'
+
+# Misc.
+alias df='df -h'
+alias cat='bat --color=always'
+alias fzf='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
+
+alias nay='yay -Rns'
+alias ope='yay -Rns (yay -Qtdq)'
 
 # Setup Starship, fzf, & zoxide
 eval "$(starship init bash)"
