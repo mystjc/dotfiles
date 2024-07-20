@@ -11,10 +11,10 @@
 set fish_greeting
 
 # Manpager
-set -x MANPAGER "less"
+set -x MANPAGER less
 
 # Starship
-set STARSHIP_CONFIG ""~/.config/starship/starship.toml""
+set -x STARSHIP_CONFIG ~/.config/starship/starship.toml
 
 # ALIASES
 
