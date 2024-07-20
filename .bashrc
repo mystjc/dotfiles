@@ -27,7 +27,7 @@ alias la='lsd -a'
 alias ll='lsd -al'
 alias lt='lsd -d --tree'
 
-alias mkdir='mkdir -v'
+alias mkdir='mkdir -vp'
 alias rmdir='rm -rvI'
 alias mk='touch'
 alias rm='rm -vi'
