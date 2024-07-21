@@ -30,13 +30,13 @@ $python\
 $rust\
 $time\
 [](fg:#34465c)
-[╰─❯ ](bold #34465c)
+[╰─ ](bold #34465c)
 """
 command_timeout = 5000
 
 # Replace default symbol in the prompt
 [character]
-success_symbol = "[❯](bold #34465c)"
+success_symbol = "[](bold #34465c)"
 
 [os]
 disabled = false
@@ -44,7 +44,7 @@ style = "bg:#34465c"
 
 [os.symbols]
 Arch = " "
-EndeavourOS = " "
+EndeavourOS = " "
 
 [username]
 show_always = true
