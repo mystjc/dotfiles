@@ -19,18 +19,13 @@ $directory\
 [](fg:#4586c4 bg:#34465c)\
 $git_branch\
 $git_status\
+$docker_context\
 $c\
-$elixir\
-$elm\
 $golang\
-$haskell\
 $java\
-$julia\
 $nodejs\
-$nim\
 $python\
 $rust\
-$docker_context\
 $time\
 [](fg:#34465c)
 [╰─❯ ](bold #34465c)
@@ -59,15 +54,11 @@ format = '[ $user ]($style)'
 style = "bg:#4586c4"
 format = "[$path ]($style)"
 
-[c]
-symbol = ""
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
 style = "bg:#34465c"
-format = '[ \[$symbol ($version)\]]($style)'
-
-[docker_context]
-symbol = ""
-style = "bg:#34465c"
-format = '[ $symbol $context]($style) $path'
+format = '[  $time ]($style)'
 
 [git_branch]
 symbol = ""
@@ -77,6 +68,17 @@ format = '[ $symbol $branch]($style)'
 [git_status]
 style = "bg:#34465c"
 format = '[ $all_status]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:#34465c"
+format = '[ $symbol $context]($style) $path'
+
+# Languages
+[c]
+symbol = ""
+style = "bg:#34465c"
+format = '[ \[$symbol ($version)\]]($style)'
 
 [golang]
 symbol = ""
@@ -112,9 +114,3 @@ format = '[ \[$symbol ($version)\]]($style)'
 symbol = "󱘗"
 style = "bg:#34465c"
 format = '[ \[$symbol ($version)\]]($style)'
-
-[time]
-disabled = false
-time_format = "%R" # Hour:Minute Format
-style = "bg:#34465c"
-format = '[  $time ]($style)'
