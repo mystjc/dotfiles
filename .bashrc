@@ -17,6 +17,7 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 # ALIASES
 
 # Navigation
+alias .='cd -'
 alias ..='cd ../'
 alias ...='cd ../../'
 alias ....='cd ../../../'
