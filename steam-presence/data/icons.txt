@@ -1,3 +1,4 @@
 team fortress 2=https://cdn2.steamgriddb.com/icon/b43500a3d5362c75c3b893ca2d8a3c0f/32/256x256.png||Steam Presence
 lethal company=https://cdn2.steamgriddb.com/icon/5d29c687a58bc919bd4b28609e2f7134/32/256x256.png||Steam Presence
 buckshot roulette=https://cdn2.steamgriddb.com/icon_thumb/a9dc0b4a2809b2e4e26480b54f8e7c2a.png||Steam Presence
+stick fight: the game=https://cdn2.steamgriddb.com/icon/482a276004b304c760a6987e5704db04/32/256x256.png||Steam Presence
