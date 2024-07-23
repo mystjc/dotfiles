@@ -1,0 +1,16 @@
+{
+    "STEAM_API_KEY": "0FD7A870F82A9C616335A16FCDCFBF88",
+    "USER_IDS": "76561198823263065",
+    "DISCORD_APPLICATION_ID": "654125585056006214",
+    "FETCH_STEAM_RICH_PRESENCE": true,
+    "FETCH_STEAM_REVIEWS": false,
+    "ADD_STEAM_STORE_BUTTON": false,
+    "WEB_SCRAPE": false,
+    "COVER_ART": {
+        "STEAM_GRID_DB": {
+            "ENABLED": true,
+            "STEAM_GRID_API_KEY": "f2ace64a2eb61624a1997910c577e8ec"
+        },
+        "USE_STEAM_STORE_FALLBACK": true
+    }
+}
