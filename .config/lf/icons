@@ -1,0 +1,196 @@
+# These examples require Nerd Fonts or a compatible font to be used.
+# See https://www.nerdfonts.com for more information.
+
+# file types
+ln             # LINK
+or             # ORPHAN
+tw      t       # STICKY_OTHER_WRITABLE
+ow             # OTHER_WRITABLE
+st      t       # STICKY
+di             # DIR
+pi      󰈲       # FIFO
+so      s       # SOCK
+bd      b       # BLK
+cd      c       # CHR
+su      u       # SETUID
+sg      g       # SETGID
+ex             # EXEC
+fi             # FILE
+
+# file names
+*gruntfile.coffee       
+*gruntfile.js           
+*gruntfile.ls           
+*gulpfile.coffee        
+*gulpfile.js            
+*gulpfile.ls            
+*mix.lock               
+*favicon.ico            
+*icons                  
+*LICENSE                
+*README                 
+*node_modules           
+*react.jsx              
+*dockerfile             
+*docker-compose.yml     
+*docker-compose.yaml    
+*compose.yml            
+*compose.yaml           
+*makefile               
+*cmakelists.txt         
+*robots.txt             󰚩
+*lfrc                   
+*.gitconfig             
+*.gitignore             
+*.gitattributes         
+*.gitlab-ci.yml         
+*.bashrc                
+*.bash_history          
+*.bash_logout           
+*.bash_profile          
+*.vimrc                 
+
+# file extensions
+*.txt           
+*.styl          
+*.sass          
+*.scss          
+*.htm           
+*.html          
+*.slim          
+*.haml          
+*.ejs           
+*.css           
+*.less          
+*.md            
+*.markdown      
+*.rmd           
+*.json          
+*.jsonc         
+*.js            
+*.mjs           
+*.jsx           
+*.rb            
+*.gemspec       
+*.php           
+*.py            
+*.pyc           
+*.coffee        
+*.mustache      
+*.hbs           
+*.conf          
+*.ini           
+*.rasi          
+*.yml           
+*.yaml          
+*.toml          
+*.bat           
+*.mk            
+*.jpg           
+*.jpeg          
+*.bmp           
+*.png           
+*.webp          
+*.gif           
+*.ico           
+*.twig          
+*.cpp           
+*.cc            
+*.c             
+*.cs            󰌛
+*.h             
+*.hh            
+*.hpp           
+*.hs            
+*.lhs           
+*.nix           
+*.lua           
+*.java          
+*.sh            
+*.fish          
+*.bash          
+*.zsh           
+*.ksh           
+*.csh           
+*.awk           
+*.ps1           
+*.ml            
+*.mli           
+*.diff          
+*.db            
+*.sql           
+*.dump          
+*.clj           
+*.cljs          
+*.scala         
+*.go            
+*.dart          
+*.xul           
+*.sln           
+*.pl            
+*.pm            
+*.t             
+*.rss           
+*.fsx           
+*.fs            
+*.fsi           
+*.rs            
+*.rlib          
+*.erl           
+*.ex            
+*.exs           
+*.vim           
+*.ts            
+*.tsx           
+*.jl            
+*.pp            
+*.vue           
+*.elm           
+*.swift         
+*.tex           
+*.r             󰟔
+*.rproj         󰗆
+*.pem           󰌆
+*.xml           
+*.dat           
+*.bin           
+*.bak           󰁯
+*.log           
+
+# archives or compressed
+*.tar   
+*.tgz   
+*.zip   
+*.deb   
+*.rpm   
+*.jar   
+*.rar   
+*.7z    
+
+# image formats
+*.jpg   
+*.jpeg  
+*.gif   
+*.bmp   
+*.tiff  
+*.png   
+*.svg   
+
+# video formats
+*.clip  
+*.mov   
+*.mkv   
+*.webm  
+*.mp4   
+*.m4v   
+*.wmv   
+*.avi   
+
+# audio formats
+*.flac  
+*.mp3   
+*.ogg   
+*.wav   
+
+# other formats
+*.pdf   

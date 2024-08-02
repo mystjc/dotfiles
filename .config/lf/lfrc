@@ -5,10 +5,9 @@
 # | | |
 # |_|_|
 
+# Basic Settings
 set previewer ~/.config/lf/previewer
 set cleaner ~/.config/lf/cleaner
-
-# Basic Settings
 set hidden true
 set ignorecase true
 set icons true
