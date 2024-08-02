@@ -31,7 +31,7 @@ theme[selected_bg]="#4586c4"
 theme[selected_fg]="#c2ddff"
 
 # Color of inactive/disabled text
-theme[inactive_fg]="#4586c4"
+theme[inactive_fg]="#5c87bb"
 
 # Misc colors for processes box including mini cpu graphs, details memory graph and details status text
 theme[proc_misc]="#b3c8e1"
@@ -57,8 +57,8 @@ theme[temp_mid]="#eec36a"
 theme[temp_end]="#ee6a65"
 
 # CPU graph colors
-theme[cpu_start]="#76a6e4"
-theme[cpu_mid]="#5c87bb"
+theme[cpu_start]="#76c4e0"
+theme[cpu_mid]="#76a6e4"
 theme[cpu_end]="#4586c4"
 
 # Mem/Disk free meter
@@ -82,9 +82,12 @@ theme[used_mid]="#eec36a"
 theme[used_end]="#ee6a65"
 
 # Download graph colors
-theme[download_start]="#c2ddff"
+theme[download_start]="#76c4e0"
+theme[download_mid]="#76a6e4"
 theme[download_end]="#4586c4"
 
 # Upload graph colors
-theme[upload_start]="#c2ddff"
+theme[upload_start]="#76c4e0"
+theme[upload_mid]="#76a6e4"
 theme[upload_end]="#4586c4"
+
