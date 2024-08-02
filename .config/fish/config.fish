@@ -25,8 +25,8 @@ alias ....='cd ../../../'
 
 # File management
 alias ls='lsd'
-alias la='lsd -a'
-alias ll='lsd -al'
+alias la='lsd -A'
+alias ll='lsd -Al'
 alias lt='lsd -d --tree'
 
 alias mkdir='mkdir -vp'
