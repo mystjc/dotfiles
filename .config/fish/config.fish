@@ -79,7 +79,7 @@ alias reset='git reset --hard HEAD~1'
 
 # Misc.
 alias df='df -h'
-alias cat='bat --color=always'
+alias cat='bat --color=always --style=numbers'
 alias fzf='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
 alias fast='fastfetch'
 
