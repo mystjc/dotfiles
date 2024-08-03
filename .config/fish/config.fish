@@ -15,6 +15,18 @@ set -x MANPAGER less
 # Starship
 set -x STARSHIP_CONFIG ~/.config/starship/starship.toml
 
+# bat
+set -x BAT_THEME Cobaltic
+
+# fzf
+set -Ux FZF_DEFAULT_OPTS '
+  --color=fg:#b3c8e1,fg+:#76a6e4,bg:#242f3b,bg+:#242f3b
+  --color=hl:#8bbb65,hl+:#ace37e,info:#76c4e0,marker:#d580e0
+  --color=prompt:#34465c,spinner:#76c4e0,pointer:#4586c4,header:#b066b9
+  --color=border:#34465c,label:#b3c8e1,query:#b3c8e1
+  --border="rounded" --border-label="" --preview-window="border-rounded"
+  --prompt=" " --separator="─" --scrollbar="│" --info="right"'
+
 # ALIASES
 
 # Navigation
