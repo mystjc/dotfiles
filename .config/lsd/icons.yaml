@@ -1,3 +1,10 @@
+#  _         _
+# | |       | |
+# | |___  __| |
+# | / __|/ _` |
+# | \__ \ (_| |
+# |_|___/\__,_|
+
 name:
     downloads: 
     music: 󰻂
@@ -13,6 +20,7 @@ name:
     compose.yaml: 
     config: 
     lfrc: 
+    .git: 
     .config: 
     .local: 
     .electron-gyp: 

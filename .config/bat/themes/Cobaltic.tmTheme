@@ -1,14 +1,11 @@
 <!--
-Copyright (c) 2017-present Arctic Ice Studio <development@arcticicestudio.com>
-Copyright (c) 2017-present Sven Greb <code@svengreb.de>
+  _           _
+ | |         | |
+ | |__   __ _| |_
+ | '_ \ / _` | __|
+ | |_) | (_| | |_
+ |_.__/ \__,_|\__|
 
-Project:    Nord Sublime Text
-Repository: https://github.com/arcticicestudio/nord-sublime-text
-License:    MIT
-References
-https://www.sublimetext.com/docs/3/color_schemes.html
-https://www.sublimetext.com/docs/3/themes.html
-https://www.sublimetext.com/docs/3/scope_naming.html
 -->
 
 <?xml version="1.0" encoding="UTF-8"?>
