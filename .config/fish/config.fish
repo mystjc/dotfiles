@@ -102,6 +102,32 @@ function __history_previous_command
   end
 end
 
+# Syntax Highlighting
+set fish_color_normal normal
+set fish_color_command blue
+set fish_color_keyword magenta
+set fish_color_quote yellow
+set fish_color_redirection green
+set fish_color_end magenta
+set fish_color_error cyan
+set fish_color_param cyan
+set fish_color_valid_path brcyan
+set fish_color_option green
+set fish_color_comment brblack
+set fish_color_selection brwhite
+set fish_color_operator brcyan
+set fish_color_escape brcyan
+set fish_color_autosuggestion brblack
+set fish_color_cwd green
+set fish_color_cwd_root green
+set fish_color_user brgreen
+set fish_color_host brgreen
+set fish_color_host_remote yellow
+set fish_color_status red
+set fish_color_cancel brblack
+set fish_color_search_match bryellow
+set fish_color_history_current bryellow
+
 # Setup Starship, fzf, & zoxide
 function starship_transient_prompt_func
   starship module character
