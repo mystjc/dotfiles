@@ -6,27 +6,25 @@
 # |_|_|
 
 # Basic Settings
+set shell bash
 set previewer ~/.config/lf/previewer
 set cleaner ~/.config/lf/cleaner
 set hidden true
 set ignorecase true
 set icons true
 
-# Functions
-cmd fzf_jump ${{
-    res="$(find . -maxdepth 1 | fzf --reverse --header='Jump to location')"
-    if [ -n "$res" ]; then
-        if [ -d "$res" ]; then
-            cmd="cd"
-        else
-            cmd="select"
-        fi
-        res="$(printf '%s' "$res" | sed 's/\\/\\\\/g;s/"/\\"/g')"
-        lf -remote "send $id $cmd \"$res\""
-    fi
-}}
-map <c-f> :fzf_jump
+# FUNCTIONS
 
+# Open directory/file
+cmd open ${{
+    case $(file --mime-type "$f" -bL) in
+        text/*|application/json) $EDITOR "$f";;
+        application/x-executable) "$f";;
+        *) xdg-open "$f" ;;
+    esac
+}}
+
+# Search the contents of a directory
 cmd fzf_search ${{
     RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case "
     res="$(
@@ -37,4 +35,37 @@ cmd fzf_search ${{
     )"
     [ -n "$res" ] && lf -remote "send $id select \"$res\""
 }}
-map <c-g> :fzf_search
+
+# Quickly jump to a directory
+cmd fzf_jump ${{
+    res="$(find . -maxdepth 3 | fzf --reverse --header='Jump to location')"
+    if [ -n "$res" ]; then
+        if [ -d "$res" ]; then
+            cmd="cd"
+        else
+            cmd="select"
+        fi
+        res="$(printf '%s' "$res" | sed 's/\\/\\\\/g;s/"/\\"/g')"
+        lf -remote "send $id $cmd \"$res\""
+    fi
+}}
+
+# BINDS
+
+# Remove defaults
+map m
+map "'"
+map '"'
+map f
+map F
+map ;
+map ,
+map /
+map ?
+map n
+map N
+
+# Functions
+map <enter> open
+map <c-f> :fzf_search
+map <c-j> :fzf_jump
