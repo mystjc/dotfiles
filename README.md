@@ -17,8 +17,8 @@ git clone https://github.com/mystjc/dotfiles.git && cd dotfiles
 Afterwards, make sure to install the necessary programs:
 
 ```shell
-sudo pacman -S kitty wezterm
-sudo pacman -S bat fastfetch fish fzf lf lsd mangohud ripgrep starship zoxide
+sudo pacman -S kitty rofi wezterm
+sudo pacman -S bat btop fastfetch fish fzf lf lsd mangohud ripgrep starship zoxide
 ```
 
 Then, run Stow within `~/dotfiles` to create the symlinks:
