@@ -8,6 +8,10 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Visual & Editor
+export $VISUAL="nvim"
+export $EDITOR="nvim"
+
 # Manpager
 export MANPAGER="less"
 
@@ -18,6 +22,7 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export BAT_THEME="Cobaltic"
 
 # fzf
+export FZF_DEFAULT_COMMAND='fd --type file --hidden --no-ignore'
 export FZF_DEFAULT_OPTS='
   --color=fg:#b3c8e1,fg+:#76a6e4,bg:#242f3b,bg+:#242f3b
   --color=hl:#8bbb65,hl+:#ace37e,info:#76c4e0,marker:#d580e0
@@ -48,39 +53,31 @@ alias cp='cp -vi'
 alias mv='mv -vi'
 
 # Git aliases
-alias git-aliases='rg git ~/dotfiles/.config/fish/'
-
 alias add='git add'
 alias restore='git restore --staged'
 alias stage='git add --all'
 alias unstage='git restore --staged .'
 alias commit='git commit --message'
 alias save='git add --all && git commit --message'
+alias fetch='git fetch'
+alias pull='git pull'
+alias push='git push'
 
-alias branch='git branch'
-alias delete='git branch --delete'
-alias checkout='git checkout'
-alias merge='git merge'
-alias rebase='git rebase'
-
-alias fetch='git fetch origin'
-alias pull='git pull origin'
-alias push='git push origin'
-
-alias stats='git status -s'
-alias log='git log'
-alias diff='git diff'
+alias state='git status -s'
+alias log='git log --oneline'
+alias diff='git diff --color=always'
 alias stash='git stash push'
 alias unstash='git stash pop'
+alias pick='git cherry-pick'
 alias revert='git revert'
-alias unrevert='git cherry-pick'
-alias reset='git reset --hard HEAD~1'
 
 # Misc.
-alias df='df -h'
 alias cat='bat --color=always --style=numbers'
 alias fzf='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
-alias fast='fastfetch'
+alias lg='lazygit'
+alias ff='fastfetch'
+alias c='clear'
+alias x='exit'
 
 alias nay='yay -Rns'
 alias ope='yay -Rns (yay -Qtdq)'

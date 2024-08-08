@@ -9,6 +9,10 @@
 # Supresses fish's intro message
 set fish_greeting
 
+# Visual & Editor
+set $VISUAL nvim
+set $EDITOR nvim
+
 # Manpager
 set -x MANPAGER less
 
@@ -19,7 +23,8 @@ set -x STARSHIP_CONFIG ~/.config/starship/starship.toml
 set -x BAT_THEME Cobaltic
 
 # fzf
-set -Ux FZF_DEFAULT_OPTS '
+set -x FZF_DEFAULT_COMMAND 'fd --type file --hidden --no-ignore'
+set -x FZF_DEFAULT_OPTS '
   --color=fg:#b3c8e1,fg+:#76a6e4,bg:#242f3b,bg+:#242f3b
   --color=hl:#8bbb65,hl+:#ace37e,info:#76c4e0,marker:#d580e0
   --color=prompt:#34465c,spinner:#76c4e0,pointer:#4586c4,header:#b066b9
@@ -49,46 +54,39 @@ alias cp='cp -vi'
 alias mv='mv -vi'
 
 # Git aliases
-alias git-aliases='rg git ~/dotfiles/.config/fish/'
-
-alias add='git add'
-alias restore='git restore --staged'
+alias add='fzf_git_add'
+alias restore='fzf_git_restore'
 alias stage='git add --all'
 alias unstage='git restore --staged .'
 alias commit='git commit --message'
 alias save='git add --all && git commit --message'
+alias fetch='git fetch'
+alias pull='git pull'
+alias push='git push'
 
-alias branch='git branch'
-alias delete='git branch --delete'
-alias checkout='git checkout'
-alias merge='git merge'
-alias rebase='git rebase'
-
-alias fetch='git fetch origin'
-alias pull='git pull origin'
-alias push='git push origin'
-
-alias stats='git status -s'
-alias log='git log'
-alias diff='git diff'
+alias state='git status -s'
+alias log='git log --oneline'
+alias diff='git diff --color=always'
 alias stash='git stash push'
 alias unstash='git stash pop'
+alias pick='git cherry-pick'
 alias revert='git revert'
-alias unrevert='git cherry-pick'
-alias reset='git reset --hard HEAD~1'
 
 # Misc.
-alias df='df -h'
+alias nvim='fzf_nvim'
 alias cat='bat --color=always --style=numbers'
 alias fzf='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
-alias fast='fastfetch'
+alias lg='lazygit'
+alias ff='fastfetch'
+alias c='clear'
+alias x='exit'
 
 alias nay='yay -Rns'
 alias ope='yay -Rns (yay -Qtdq)'
 
 # FUNCTIONS
 
-# Recreation and binding of !!
+# recreation and binding of !!
 function fish_user_key_bindings
   bind ! __history_previous_command
 end
@@ -100,6 +98,35 @@ function __history_previous_command
   case "*"
     commandline -i !
   end
+end
+
+# helper fzf abstraction
+function run_fzf
+  set -f selections (
+    eval $argv[1] | string trim
+  )
+  if test -n "$selections"
+    eval $argv[2] (string split -- " " $selections)
+  end
+end
+
+# nvim using fzf
+function fzf_nvim
+  if test (count $argv) -eq 0
+    run_fzf 'fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"' 'command nvim'
+  else
+    command nvim $argv
+  end
+end
+
+# git add using fzf
+function fzf_git_add
+  run_fzf 'git ls-files --modified --others --exclude-standard | fzf --ansi --preview "git diff --color=always {1}"' 'git add'
+end
+
+# git restore using fzf
+function fzf_git_restore
+  run_fzf 'git diff --name-only --cached | fzf --ansi --preview "git diff --cached --color=always {1}"' 'git restore --staged'
 end
 
 # Syntax Highlighting
