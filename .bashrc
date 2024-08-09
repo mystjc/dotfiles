@@ -74,6 +74,7 @@ alias revert='git revert'
 # Misc.
 alias cat='bat --color=always --style=numbers'
 alias fzf='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
+alias top='btop'
 alias lg='lazygit'
 alias ff='fastfetch'
 alias c='clear'
