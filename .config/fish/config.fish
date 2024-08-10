@@ -73,7 +73,9 @@ alias pick='git cherry-pick'
 alias revert='git revert'
 
 # Misc.
+alias lvim='command nvim'
 alias nvim='fzf_nvim'
+alias code='fzf_code'
 alias cat='bat --color=always --style=numbers'
 alias fzf='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
 alias top='btop'
@@ -120,6 +122,15 @@ function fzf_nvim
   end
 end
 
+# vscode using fzf
+function fzf_code
+  if test (count $argv) -eq 0
+    run_fzf 'fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"' 'command code'
+  else
+    command code $argv
+  end
+end
+
 # git add using fzf
 function fzf_git_add
   run_fzf 'git ls-files --modified --others --exclude-standard | fzf --ansi --preview "git diff --color=always {1}"' 'git add'
@@ -134,14 +145,14 @@ end
 set fish_color_normal normal
 set fish_color_command blue
 set fish_color_keyword magenta
-set fish_color_quote yellow
-set fish_color_redirection green
-set fish_color_end magenta
+set fish_color_quote brgreen
+set fish_color_redirection yellow
+set fish_color_end brmagenta
 set fish_color_error cyan
 set fish_color_param cyan
 set fish_color_valid_path brcyan
-set fish_color_option green
-set fish_color_comment brblack
+set fish_color_option yellow
+set fish_color_comment green
 set fish_color_selection brwhite
 set fish_color_operator brcyan
 set fish_color_escape brcyan
@@ -152,7 +163,7 @@ set fish_color_user brgreen
 set fish_color_host brgreen
 set fish_color_host_remote yellow
 set fish_color_status red
-set fish_color_cancel brblack
+set fish_color_cancel white
 set fish_color_search_match bryellow
 set fish_color_history_current bryellow
 

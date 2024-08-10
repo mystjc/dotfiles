@@ -72,6 +72,7 @@ alias pick='git cherry-pick'
 alias revert='git revert'
 
 # Misc.
+alias lvim='nvim'
 alias cat='bat --color=always --style=numbers'
 alias fzf='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
 alias top='btop'
