@@ -9,8 +9,8 @@
 [[ $- != *i* ]] && return
 
 # Visual & Editor
-export $VISUAL="nvim"
-export $EDITOR="nvim"
+export VISUAL="nvim"
+export EDITOR="nvim"
 
 # Manpager
 export MANPAGER="less"
