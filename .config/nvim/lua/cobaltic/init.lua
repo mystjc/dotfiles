@@ -1,8 +1,6 @@
-local util = require("cobaltic.util")
-
--- Load the theme
+-- Colorscheme initialization
 local set = function()
-	util.load()
+    require("cobaltic.util").load()
 end
 
 return { set = set }

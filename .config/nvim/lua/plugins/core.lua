@@ -1,7 +1,7 @@
--- set colorscheme
+-- Set colorscheme
 return {
-  "LazyVim/LazyVim",
-  opts = {
-    colorscheme = "cobaltic",
-  },
+    "LazyVim/LazyVim",
+    opts = {
+        colorscheme = "cobaltic",
+    },
 }
