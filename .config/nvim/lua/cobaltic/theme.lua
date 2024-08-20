@@ -84,7 +84,7 @@ theme.loadEditor = function()
         Folded = { fg = cobaltic.dark_green, bg = cobaltic.none, style = italic },
         FoldColumn = { fg = cobaltic.dark_cyan },
         IncSearch = { fg = cobaltic.light_white, bg = cobaltic.dark_blue },
-        LineNr = { fg = cobaltic.dark_green },
+        LineNr = { fg = cobaltic.bright_black },
         CursorLineNr = { fg = cobaltic.foreground },
         MatchParen = { fg = cobaltic.bright_magenta, bg = cobaltic.none, style = bold },
         ModeMsg = { fg = cobaltic.foreground },
