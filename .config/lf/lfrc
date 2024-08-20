@@ -38,7 +38,7 @@ cmd fzf_search ${{
 
 # Quickly jump to a directory
 cmd fzf_jump ${{
-    res="$(find . -maxdepth 3 | fzf --reverse --header='Jump to location')"
+    res="$(fd --maxdepth 3 | fzf --reverse --header='Jump to location')"
     if [ -n "$res" ]; then
         if [ -d "$res" ]; then
             cmd="cd"
@@ -56,14 +56,12 @@ cmd fzf_jump ${{
 map m
 map "'"
 map '"'
-map f
-map F
-map ;
-map ,
-map /
-map ?
-map n
-map N
+map <enter>
+map <c-j>
+map <c-b>
+map <c-f>
+map <c-u>
+map <c-d>
 
 # Functions
 map <enter> open
