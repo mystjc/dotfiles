@@ -3,7 +3,7 @@
 
 These are my personal dotfiles, currently tailored for [Arch](https://archlinux.org/) and managed with [Stow](https://www.gnu.org/software/stow/).
 
-This repository offers a collection of configurations for a variety of applications & utilities.
+This repository offers a collection of configurations for a variety of software.
 
 ## Installation
 
