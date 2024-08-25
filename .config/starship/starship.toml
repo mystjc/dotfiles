@@ -38,7 +38,7 @@ command_timeout = 5000
 
 # Replace default symbol in the prompt
 [character]
-success_symbol = "[](bold #344a5e)"
+success_symbol = "[─](bold #344a5e)"
 
 [os]
 disabled = false
