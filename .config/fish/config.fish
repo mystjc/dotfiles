@@ -4,14 +4,13 @@
 # |  _| / __| '_ \
 # | | | \__ \ | | |
 # |_| |_|___/_| |_|
-#
 
 # Supresses fish's intro message
 set fish_greeting
 
 # Visual & Editor
-set $VISUAL nvim
-set $EDITOR nvim
+set -x VISUAL nvim
+set -x EDITOR nvim
 
 # Manpager
 set -x MANPAGER less
@@ -72,73 +71,66 @@ alias unstash='git stash pop'
 alias pick='git cherry-pick'
 alias revert='git revert'
 
+# yt-dlp aliases
+alias ytv='cd ~/Downloads && yt-dlp'
+alias yta='cd ~/Downloads && yt-dlp --extract-audio'
+
+# System
+alias nay='yay -Rns'
+alias ope='yay -Rns (yay -Qtdq)'
+
 # Misc.
 alias lvim='command nvim'
 alias nvim='fzf_nvim'
 alias code='fzf_code'
 alias cat='bat --color=always --style=numbers'
-alias fzf='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
+alias fzf='fzf -e --preview "bat --color=always --style=numbers --line-range=:500 {}"'
 alias top='btop'
 alias lg='lazygit'
 alias ff='fastfetch'
 alias c='clear'
 alias x='exit'
-
-alias nay='yay -Rns'
-alias ope='yay -Rns (yay -Qtdq)'
+alias hs='history'
+alias hsd='history delete'
 
 # FUNCTIONS
 
-# recreation and binding of !!
-function fish_user_key_bindings
-  bind ! __history_previous_command
-end
-
-function __history_previous_command
-  switch (commandline -t)
-  case "!"
-    commandline -t $history[1]; commandline -f repaint
-  case "*"
-    commandline -i !
-  end
-end
-
 # helper fzf abstraction
 function run_fzf
-  set -f selections (
-    eval $argv[1] | string trim
-  )
-  if test -n "$selections"
-    eval $argv[2] (string split -- " " $selections)
-  end
+    set -f selections (
+        eval $argv[1] | string trim
+    )
+    if test -n "$selections"
+        eval $argv[2] (string split -- " " $selections)
+    end
 end
 
 # nvim using fzf
 function fzf_nvim
-  if test (count $argv) -eq 0
-    run_fzf 'fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"' 'command nvim'
-  else
-    command nvim $argv
-  end
+    if test (count $argv) -eq 0
+        run_fzf 'fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"' 'command nvim'
+    else
+        command nvim $argv
+    end
 end
 
 # vscode using fzf
 function fzf_code
-  if test (count $argv) -eq 0
-    run_fzf 'fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"' 'command code'
-  else
-    command code $argv
-  end
+    if test (count $argv) -eq 0
+        run_fzf 'fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"' 'command code'
+    else
+        command code $argv
+    end
 end
 
 # git add using fzf
 function fzf_git_add
-  run_fzf 'git ls-files --modified --others --exclude-standard | fzf --ansi --preview "git diff --color=always {1}"' 'git add'
+    run_fzf 'git ls-files --modified --others --exclude-standard | fzf --ansi --preview "git diff --color=always {1}"' 'git add'
 end
 
 # git restore using fzf
 function fzf_git_restore
-  run_fzf 'git diff --name-only --cached | fzf --ansi --preview "git diff --cached --color=always {1}"' 'git restore --staged'
+    run_fzf 'git diff --name-only --cached | fzf --ansi --preview "git diff --cached --color=always {1}"' 'git restore --staged'
 end
 
 # Syntax Highlighting
@@ -167,9 +159,20 @@ set fish_color_cancel white
 set fish_color_search_match bryellow
 set fish_color_history_current bryellow
 
+# Cursors
+set fish_cursor_default block
+set fish_cursor_insert line
+set fish_cursor_replace_one underscore
+set fish_cursor_replace underscore
+
+# Key Bindings
+function fish_user_key_bindings
+    fish_vi_key_bindings insert
+end
+
 # Setup Starship, fzf, & zoxide
 function starship_transient_prompt_func
-  starship module character
+    starship module character
 end
 starship init fish | source
 enable_transience

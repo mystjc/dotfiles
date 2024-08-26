@@ -71,18 +71,23 @@ alias unstash='git stash pop'
 alias pick='git cherry-pick'
 alias revert='git revert'
 
+# yt-dlp aliases
+alias ytv='cd ~/Downloads && yt-dlp'
+alias yta='cd ~/Downloads && yt-dlp --extract-audio'
+
+# System
+alias nay='yay -Rns'
+alias ope='yay -Rns (yay -Qtdq)'
+
 # Misc.
 alias lvim='nvim'
 alias cat='bat --color=always --style=numbers'
-alias fzf='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
+alias fzf='fzf -e --preview "bat --color=always --style=numbers --line-range=:500 {}"'
 alias top='btop'
 alias lg='lazygit'
 alias ff='fastfetch'
 alias c='clear'
 alias x='exit'
-
-alias nay='yay -Rns'
-alias ope='yay -Rns (yay -Qtdq)'
 
 # Setup Starship, fzf, & zoxide
 eval "$(starship init bash)"
