@@ -105,7 +105,7 @@ run_fzf () {
 # Nvim using fzf
 fzf_nvim () {
     if [ $# -eq 0 ]; then
-        run_fzf 'fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"' '\nvim'
+        run_fzf '\fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"' '\nvim'
     else
         \nvim "$@"
     fi
@@ -114,7 +114,7 @@ fzf_nvim () {
 # VSCode using fzf
 fzf_code () {
     if [ $# -eq 0 ]; then
-        run_fzf 'fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"' '\code'
+        run_fzf '\fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"' '\code'
     else
         \code "$@"
     fi
@@ -122,12 +122,12 @@ fzf_code () {
 
 # Git add using fzf
 fzf_git_add () {
-    run_fzf 'git ls-files --modified --others --exclude-standard | fzf --ansi --preview "git diff --color=always {1}"' 'git add'
+    run_fzf 'git ls-files --modified --others --exclude-standard | \fzf --ansi --preview "git diff --color=always {1}"' 'git add'
 }
 
 # Git restore using fzf
 fzf_git_restore () {
-    run_fzf 'git diff --name-only --cached | fzf --ansi --preview "git diff --cached --color=always {1}"' 'git restore --staged'
+    run_fzf 'git diff --name-only --cached | \fzf --ansi --preview "git diff --cached --color=always {1}"' 'git restore --staged'
 }
 
 # Change cursor
