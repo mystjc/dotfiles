@@ -53,8 +53,8 @@ alias cp='cp -vi'
 alias mv='mv -vi'
 
 # Git aliases
-alias add='git add'
-alias restore='git restore --staged'
+alias add='fzf_git_add'
+alias restore='fzf_git_restore'
 alias stage='git add --all'
 alias unstage='git restore --staged .'
 alias commit='git commit --message'
@@ -81,6 +81,8 @@ alias ope='yay -Rns (yay -Qtdq)'
 
 # Misc.
 alias lvim='nvim'
+alias nvim='fzf_nvim'
+alias code='fzf_code'
 alias cat='bat --color=always --style=numbers'
 alias fzf='fzf -e --preview "bat --color=always --style=numbers --line-range=:500 {}"'
 alias top='btop'
@@ -88,6 +90,48 @@ alias lg='lazygit'
 alias ff='fastfetch'
 alias c='clear'
 alias x='exit'
+
+# FUNCTIONS
+
+# Helper fzf abstraction
+run_fzf () {
+    local selections=$(eval "$1")
+    selections=${selections//\'/}
+    if [ -n "$selections" ]; then
+        eval "$2" $(echo " $selections")
+    fi
+}
+
+# Nvim using fzf
+fzf_nvim () {
+    if [ $# -eq 0 ]; then
+        run_fzf 'fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"' '\nvim'
+    else
+        \nvim "$@"
+    fi
+}
+
+# VSCode using fzf
+fzf_code () {
+    if [ $# -eq 0 ]; then
+        run_fzf 'fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"' '\code'
+    else
+        \code "$@"
+    fi
+}
+
+# Git add using fzf
+fzf_git_add () {
+    run_fzf 'git ls-files --modified --others --exclude-standard | fzf --ansi --preview "git diff --color=always {1}"' 'git add'
+}
+
+# Git restore using fzf
+fzf_git_restore () {
+    run_fzf 'git diff --name-only --cached | fzf --ansi --preview "git diff --cached --color=always {1}"' 'git restore --staged'
+}
+
+# Change cursor
+echo -ne "\e[6 q"
 
 # Setup Starship, fzf, & zoxide
 eval "$(starship init bash)"

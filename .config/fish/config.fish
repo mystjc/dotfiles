@@ -90,12 +90,10 @@ alias lg='lazygit'
 alias ff='fastfetch'
 alias c='clear'
 alias x='exit'
-alias hs='history'
-alias hsd='history delete'
 
 # FUNCTIONS
 
-# helper fzf abstraction
+# Helper fzf abstraction
 function run_fzf
     set -f selections (
         eval $argv[1] | string trim
@@ -105,32 +103,32 @@ function run_fzf
     end
 end
 
-# nvim using fzf
+# Nvim using fzf
 function fzf_nvim
     if test (count $argv) -eq 0
-        run_fzf 'fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"' 'command nvim'
+        run_fzf 'command fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"' 'command nvim'
     else
         command nvim $argv
     end
 end
 
-# vscode using fzf
+# VSCode using fzf
 function fzf_code
     if test (count $argv) -eq 0
-        run_fzf 'fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"' 'command code'
+        run_fzf 'command fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"' 'command code'
     else
         command code $argv
     end
 end
 
-# git add using fzf
+# Git add using fzf
 function fzf_git_add
-    run_fzf 'git ls-files --modified --others --exclude-standard | fzf --ansi --preview "git diff --color=always {1}"' 'git add'
+    run_fzf 'git ls-files --modified --others --exclude-standard | command fzf --ansi --preview "git diff --color=always {1}"' 'git add'
 end
 
-# git restore using fzf
+# Git restore using fzf
 function fzf_git_restore
-    run_fzf 'git diff --name-only --cached | fzf --ansi --preview "git diff --cached --color=always {1}"' 'git restore --staged'
+    run_fzf 'git diff --name-only --cached | command fzf --ansi --preview "git diff --cached --color=always {1}"' 'git restore --staged'
 end
 
 # Syntax Highlighting
