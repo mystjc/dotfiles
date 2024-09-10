@@ -7,7 +7,7 @@
 
 # file types
 ln             # LINK
-or             # ORPHAN
+or             # ORPHAN
 tw      t       # STICKY_OTHER_WRITABLE
 ow             # OTHER_WRITABLE
 st      t       # STICKY
@@ -35,11 +35,11 @@ fi             # FILE
 *README                 
 *node_modules           
 *react.jsx              
-*dockerfile             
-*docker-compose.yml     
-*docker-compose.yaml    
-*compose.yml            
-*compose.yaml           
+*dockerfile             󰡨
+*docker-compose.yml     󰡨
+*docker-compose.yaml    󰡨
+*compose.yml            󰡨
+*compose.yaml           󰡨
 *makefile               
 *cmakelists.txt         
 *robots.txt             󰚩
@@ -48,14 +48,15 @@ fi             # FILE
 *.gitignore             
 *.gitattributes         
 *.gitlab-ci.yml         
+*.gtkrc-2.0             
 *.bashrc                
 *.bash_history          
 *.bash_logout           
 *.bash_profile          
 *.vimrc                 
+*.yarnrc                
 
 # file extensions
-*.txt           
 *.styl          
 *.sass          
 *.scss          
@@ -90,13 +91,6 @@ fi             # FILE
 *.toml          
 *.bat           
 *.mk            
-*.jpg           
-*.jpeg          
-*.bmp           
-*.png           
-*.webp          
-*.gif           
-*.ico           
 *.twig          
 *.cpp           
 *.cc            
@@ -110,14 +104,14 @@ fi             # FILE
 *.nix           
 *.lua           
 *.java          
-*.sh            
-*.fish          
-*.bash          
-*.zsh           
-*.ksh           
-*.csh           
-*.awk           
-*.ps1           
+*.sh            
+*.fish          
+*.bash          
+*.zsh           
+*.ksh           
+*.csh           
+*.awk           
+*.ps1           
 *.ml            
 *.mli           
 *.diff          
@@ -162,39 +156,48 @@ fi             # FILE
 *.log           
 
 # archives or compressed
-*.tar   
-*.tgz   
-*.zip   
-*.deb   
-*.rpm   
-*.jar   
-*.rar   
-*.7z    
+*.7z            
+*.jar           
+*.rar           
+*.tar           
+*.tgz           
+*.zip           
 
 # image formats
-*.jpg   
-*.jpeg  
-*.gif   
-*.bmp   
-*.tiff  
-*.png   
-*.svg   
+*.bmp           
+*.gif           
+*.ico           
+*.jpg           
+*.jpeg          
+*.png           
+*.svg           
+*.tiff          
+*.webp          
 
 # video formats
-*.clip  
-*.mov   
-*.mkv   
-*.webm  
-*.mp4   
-*.m4v   
-*.wmv   
-*.avi   
+*.clip          
+*.m4v           
+*.mkv           
+*.mov           
+*.mp4           
+*.webm          
 
 # audio formats
-*.flac  
-*.mp3   
-*.ogg   
-*.wav   
+*.aac           
+*.aif           
+*.aiff          
+*.flac          
+*.m4a           
+*.mp3           
+*.ogg           
+*.opus          
+*.wav           
 
 # other formats
-*.pdf   
+*.txt           
+*.pdf           
+*.doc           
+*.docx          
+*.ppt           
+*.xls           
+*.xlsx          

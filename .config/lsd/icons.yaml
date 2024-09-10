@@ -6,29 +6,42 @@
 # |_|___/\__,_|
 
 name:
-    downloads: 
-    music: 󰻂
-    pictures: 
-    videos: 
     .bashrc: 
     .bash_history: 
     .bash_logout: 
     .bash_profile: 
-    node_modules: 
-    docker-compose.yaml: 
-    compose.yml: 
-    compose.yaml: 
-    config: 
-    lfrc: 
-    .git: 
+    .dockerignore: 󰡨
+    .gitconfig: 
+    .gitignore: 
+    .gtkrc-2.0: 
+    .cache: 󰃨
     .config: 
-    .local: 
+    .git: 
     .electron-gyp: 
     .gnupg: 
+    .local: 
     .npm: 
+    .pki: 
     .mozilla: 
+    .ssh: 󰌆
     .steam: 
     .vscode: 󰨞
+    .wine: 
+    desktop: 
+    documents: 
+    dotfiles: 
+    downloads: 
+    music: 󰻂
+    pictures: 
+    public: 
+    videos: 
+    config: 
+    compose.yaml: 󰡨
+    compose.yml: 󰡨
+    dockerfile: 󰡨
+    docker-compose.yaml: 󰡨
+    docker-compose.yml: 󰡨
+    gtkrc: 
 extension:
     slim: 
     haml: 
@@ -44,15 +57,19 @@ extension:
     sql: 
     dump: 
     rasi: 
+    txt: 
     clip: 
-    mov: 
-    mkv: 
-    webm: 
-    mp4: 
     m4v: 
-    wmv: 
-    avi: 
+    mkv: 
+    mov: 
+    mp4: 
+    webm: 
+    acc: 
+    aif: 
+    aiff: 
     flac: 
+    m4a: 
     mp3: 
     ogg: 
+    opus: 
     wav: 
