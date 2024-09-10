@@ -40,10 +40,10 @@ alias ...='cd ../../'
 alias ....='cd ../../../'
 
 # File management
-alias ls='lsd'
-alias la='lsd -A'
-alias ll='lsd -Al'
-alias lt='lsd --tree'
+alias ls='lsd --group-directories-first'
+alias la='lsd -A --group-directories-first'
+alias ll='lsd -Al --group-directories-first'
+alias lt='lsd --tree --group-directories-first'
 
 alias mkd='mkdir -vp'
 alias rmd='rm -rvI'
@@ -88,10 +88,21 @@ alias fzf='fzf -e --preview "bat --color=always --style=numbers --line-range=:50
 alias top='btop'
 alias lg='lazygit'
 alias ff='fastfetch'
+alias yz='yazi_wrapper'
 alias c='clear'
 alias x='exit'
 
 # FUNCTIONS
+
+# Exit to cwd using yazi
+yazi_wrapper () {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(\cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	\rm -f -- "$tmp"
+}
 
 # Helper fzf abstraction
 run_fzf () {
