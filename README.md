@@ -18,7 +18,7 @@ Afterwards, make sure to install the necessary programs:
 
 ```shell
 sudo pacman -S kitty joplin rofi wezterm
-sudo pacman -S bat btop fastfetch fd fish fzf lazygit lf lsd mangohud neovim ripgrep starship zoxide
+sudo pacman -S bat btop fastfetch fd fish fzf kanata lazygit lf lsd mangohud neovim ripgrep starship zoxide
 ```
 
 Then, run Stow within `~/dotfiles` to create the symlinks:
