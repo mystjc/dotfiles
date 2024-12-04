@@ -1,0 +1,196 @@
+# File types
+ln             # LINK
+or             # ORPHAN
+tw      t       # STICKY_OTHER_WRITABLE
+ow             # OTHER_WRITABLE
+st      t       # STICKY
+di             # DIR
+pi      󰈲       # FIFO
+so      s       # SOCK
+bd      b       # BLK
+cd      c       # CHR
+su      u       # SETUID
+sg      g       # SETGID
+ex             # EXEC
+fi             # FILE
+
+# File names
+*gruntfile.coffee       
+*gruntfile.js           
+*gruntfile.ls           
+*gulpfile.coffee        
+*gulpfile.js            
+*gulpfile.ls            
+*mix.lock               
+*favicon.ico            
+*icons                  
+*LICENSE                
+*README                 
+*node_modules           
+*react.jsx              
+*dockerfile             󰡨
+*docker-compose.yml     󰡨
+*docker-compose.yaml    󰡨
+*compose.yml            󰡨
+*compose.yaml           󰡨
+*makefile               
+*cmakelists.txt         
+*robots.txt             󰚩
+*lfrc                   
+*.gitconfig             
+*.gitignore             
+*.gitattributes         
+*.gitlab-ci.yml         
+*.gtkrc-2.0             
+*.bashrc                
+*.bash_history          
+*.bash_logout           
+*.bash_profile          
+*.vimrc                 
+*.yarnrc                
+
+# File extensions
+*.styl          
+*.sass          
+*.scss          
+*.htm           
+*.html          
+*.slim          
+*.haml          
+*.ejs           
+*.css           
+*.less          
+*.md            
+*.markdown      
+*.rmd           
+*.json          
+*.jsonc         
+*.js            
+*.mjs           
+*.jsx           
+*.rb            
+*.gemspec       
+*.php           
+*.py            
+*.pyc           
+*.coffee        
+*.mustache      
+*.hbs           
+*.conf          
+*.ini           
+*.rasi          
+*.yml           
+*.yaml          
+*.toml          
+*.bat           
+*.mk            
+*.twig          
+*.cpp           
+*.cc            
+*.c             
+*.cs            󰌛
+*.h             
+*.hh            
+*.hpp           
+*.hs            
+*.lhs           
+*.nix           
+*.lua           
+*.java          
+*.sh            
+*.fish          
+*.bash          
+*.zsh           
+*.ksh           
+*.csh           
+*.awk           
+*.ps1           
+*.ml            
+*.mli           
+*.diff          
+*.db            
+*.sql           
+*.dump          
+*.clj           
+*.cljs          
+*.scala         
+*.go            
+*.dart          
+*.xul           
+*.sln           
+*.pl            
+*.pm            
+*.t             
+*.rss           
+*.fsx           
+*.fs            
+*.fsi           
+*.rs            
+*.rlib          
+*.erl           
+*.ex            
+*.exs           
+*.vim           
+*.ts            
+*.tsx           
+*.jl            
+*.pp            
+*.vue           
+*.elm           
+*.swift         
+*.tex           
+*.r             󰟔
+*.rproj         󰗆
+*.pem           󰌆
+*.xml           
+*.dat           
+*.bin           
+*.bak           󰁯
+*.log           
+
+# Archives or compressed
+*.7z            
+*.jar           
+*.rar           
+*.tar           
+*.tgz           
+*.zip           
+
+# Image formats
+*.bmp           
+*.gif           
+*.ico           
+*.jpg           
+*.jpeg          
+*.png           
+*.svg           
+*.tiff          
+*.webp          
+
+# Video formats
+*.clip          
+*.m4v           
+*.mkv           
+*.mov           
+*.mp4           
+*.webm          
+
+# Audio formats
+*.aac           
+*.aif           
+*.aiff          
+*.flac          
+*.m4a           
+*.mp3           
+*.ogg           
+*.opus          
+*.wav           
+
+# Other formats
+*.txt           
+*.pdf           
+*.doc           
+*.docx          
+*.ppt           
+*.xls           
+*.xlsx          

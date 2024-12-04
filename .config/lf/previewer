@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+
+FILE_PATH="${1}"
+WIDTH="${2}"
+HEIGHT="${3}"
+HORIZONTAL_POS="${4}"
+VERTICAL_POS="${5}"
+
+bat() {
+  command bat \
+    --color=always --paging=never \
+    --style=plain \
+    --wrap=character \
+    --line-range :"${HEIGHT}" \
+    --terminal-width="${WIDTH}" "$@"
+}
+
+image_preview_by_kitty() {
+  kitty icat --clear --transfer-mode memory --stdin no --place "${1}" "${2}" < /dev/null > /dev/tty
+}
+
+handle_mime() {
+  local mimetype="${1}"
+  case "${mimetype}" in
+    # Image
+    image/*)
+      if [[ $TERM == "xterm-kitty" ]]; then
+        local place="${WIDTH}x$(( HEIGHT - 1 ))@${HORIZONTAL_POS}x$(( VERTICAL_POS + 1 ))"
+        image_preview_by_kitty "${place}" "${FILE_PATH}"
+      else
+        printf "Image preview is not supported!\n"
+        printf "Resolution: %s\n" "$(identify -format "%w×%h" "${FILE_PATH}")"
+      fi
+      exit 1;;
+    # Text
+    text/* | */xml)
+      (bat --style=numbers,changes -- "${FILE_PATH}" \
+      || highlight --out-format truecolor --style darkplus --force \
+          --line-numbers --line-range=1-"${HEIGHT}" -- "${FILE_PATH}" \
+      || cat -- "${FILE_PATH}") && exit 1;;
+  esac
+}
+
+MIMETYPE="$( file --dereference --brief --mime-type -- "${FILE_PATH}" )"
+handle_mime "${MIMETYPE}"
+
+exit 1

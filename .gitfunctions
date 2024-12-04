@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Helper fzf abstraction
+run_fzf () {
+  local selections=$(eval "$1")
+  selections=${selections//\'/}
+  if [ -n "$selections" ]; then
+    eval "$2" $(echo " $selections")
+  fi
+}
+
+# Git add using fzf
+fzf_git_add () {
+  run_fzf 'git ls-files --modified --others --exclude-standard | \fzf --ansi --preview "git diff --color=always {1}"' 'git add'
+}
+
+# Git restore using fzf
+fzf_git_restore () {
+  run_fzf 'git diff --name-only --cached | \fzf --ansi --preview "git diff --cached --color=always {1}"' 'git restore --staged'
+}

@@ -1,0 +1,12 @@
+(defsrc)
+
+(defalias
+  ;; tap for caps-esc, hold to disable caps-esc
+  desc (tap-hold 400 400 esc (layer-switch caps-esc-disabled))
+  ;; tap for no-op, hold to enable caps-esc
+  eesc (tap-hold 400 400 XX (layer-switch caps-esc-enabled))
+)
+
+(deflayermap (caps-esc-enabled) caps @desc)
+
+(deflayermap (caps-esc-disabled) caps @eesc)

@@ -1,0 +1,38 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Mystjc
+	email = 77810795+mystjc@users.noreply.github.com
+[http]
+	postBuffer = 2097152000
+[credential "https://github.com"]
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = !/usr/bin/gh auth git-credential
+[alias]
+	a = !bash -c 'source $HOME/.gitfunctions && fzf_git_add'
+	aa = add --all
+	b = branch
+	c = commit
+	cm = commit --message
+	co = checkout
+	cob = checkout --branch
+	cp = cherry-pick
+	d = diff --color=always
+	dc = diff --cached --color=always
+	f = fetch
+	l = log --oneline
+	ls = ls-files
+	m = merge
+	pl = pull
+	pu = push
+	r = !bash -c 'source $HOME/.gitfunctions && fzf_git_restore'
+	ra = restore --staged .
+	rb = rebase
+	rv = revert
+	s = status --short
+
+	la = !git config --list | grep alias | cut -c 7-
