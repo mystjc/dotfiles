@@ -43,16 +43,16 @@ alias rm='rm -vi'
 alias cp='cp -vi'
 alias mv='mv -vi'
 
-# yt-dlp aliases
+# yt-dlp
 alias ytv='cd ~/Downloads && yt-dlp'
 alias yta='cd ~/Downloads && yt-dlp --extract-audio'
 
 # Misc.
-alias lvim='command nvim'
 alias nvim='fzf_nvim'
 alias code='fzf_code'
 alias cat='bat --color=always --style=numbers'
 alias fzf='fzf -e --preview "bat --color=always --style=numbers --line-range=:500 {}"'
+alias mpa='mpv --no-video'
 alias lg='lazygit'
 alias ff='fastfetch'
 alias yz='yazi_wrapper'
