@@ -5,13 +5,14 @@ classic: false
 blocks:
   - permission
   - size
+  - user
   - date
   - name
 
 # == Color ==
 color:
   when: auto
-  theme: default
+  theme: custom
 
 # == Date ==
 date: date
@@ -36,7 +37,7 @@ recursion:
   enabled: false
 
 # == Size ==
-size: default
+size: short
 
 # == Sorting ==
 sorting:
@@ -54,7 +55,7 @@ total-size: false
 hyperlink: auto
 
 # == Symlink arrow ==
-symlink-arrow: 
+symlink-arrow: 
 
 # == Header ==
 header: false

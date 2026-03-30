@@ -1,57 +1,46 @@
+filetype:
+  dir: 
+  file: 
+  pipe: 󰈲
+  socket: 󰆨
+  executable:  
+  symlink-dir: 
+  symlink-file: 
+
 name:
-  .bashrc: 
-  .bash_history: 
-  .bash_logout: 
-  .bash_profile: 
-  .dockerignore: 󰡨
-  .gitconfig: 
-  .gitignore: 
-  .gtkrc-2.0: 
-  .cache: 󰃨
+  bin: 
+  etc: 
+  home: 
+  sbin: 
+  root: 
+
+  desktop: 
+  documents: 
+  dotfiles: 
+  downloads: 
+  music: 󰻂
+  pictures: 
+  videos: 
+  
   .config: 
-  .git: 
-  .electron-gyp: 
-  .gnupg: 
-  .local: 
-  .npm: 
-  .pki: 
+  config: 
+  .git: 
+  .gitconfig: 
+  .gitignore: 
+  .github: 
+  .gnupg: 󰌆
   .mozilla: 
+  .npm: 
   .ssh: 󰌆
   .steam: 
   .vscode: 󰨞
   .wine: 
-  desktop: 
-  documents: 
-  dotfiles: 
-  downloads: 
-  music: 󰻂
-  pictures: 
-  public: 
-  videos: 
-  config: 
-  compose.yaml: 󰡨
-  compose.yml: 󰡨
-  dockerfile: 󰡨
-  docker-compose.yaml: 󰡨
-  docker-compose.yml: 󰡨
-  gtkrc: 
+
 extension:
-  slim: 
-  haml: 
-  ejs: 
-  less: 
-  rb: 
-  gemspec: 
-  coffee: 
-  mk: 
-  ml: 
-  mli: 
-  db: 
-  sql: 
-  dump: 
   rasi: 
+
+  7z: 
   txt: 
-  clip: 
   m4v: 
   mkv: 
   mov: 
