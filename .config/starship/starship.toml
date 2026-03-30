@@ -2,10 +2,14 @@ format = """
 $directory\
 $git_branch\
 $git_status\
+$fill\
 $cmd_duration\
 $line_break\
 $character
 """
+
+[fill]
+symbol = " "
 
 [character]
 success_symbol = "[❯](bold green)"
@@ -25,19 +29,19 @@ style = "bold purple"
 symbol = "󰊢"
 
 [git_status]
-format = "[(•$conflicted$untracked$modified$staged$renamed$deleted) ($ahead_behind$stashed)]($style)"
+format = "[(•$conflicted$untracked$modified$staged$renamed$deleted) ($stashed$ahead_behind)]($style)"
 style = "bold purple"
 conflicted = "​"
 ahead = "[↑${count} ](bold green)"
 behind = "[↓${count} ](bold red)"
 diverged = ""
 untracked = "​"
-stashed = "[≡ ](bold yellow)"
+stashed = "[≡ ]"
 modified = "​"
 staged = "​"
 renamed = "​"
 deleted = "​"
 
 [cmd_duration]
-format = "[$duration]($style)"
-style = "bold black"
+format = "[ $duration]($style)"
+style = "bold yellow"
