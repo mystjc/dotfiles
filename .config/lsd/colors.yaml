@@ -1,5 +1,5 @@
-user: dark_magenta
-group: dark_magenta
+user: dark_yellow
+group: dark_yellow
 permission:
   read: dark_green
   write: dark_yellow
@@ -14,10 +14,10 @@ date:
   day-old: green
   older: dark_green
 size:
-  none: dark_yellow
-  small: dark_yellow
-  medium: yellow
-  large: yellow
+  none: dark_magenta
+  small: dark_magenta
+  medium: magenta
+  large: magenta
 inode:
   valid: magenta
   invalid: red
