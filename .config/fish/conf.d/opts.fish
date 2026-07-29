@@ -1,3 +1,6 @@
+# Supresses fish's greeting message
+set fish_greeting
+
 # Syntax highlighting
 set fish_color_normal normal
 set fish_color_command blue

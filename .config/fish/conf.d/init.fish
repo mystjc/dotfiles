@@ -1,6 +1,3 @@
-# Supresses fish's greeting message
-set fish_greeting
-
 # Set visual, editor, & manpager
 set -x VISUAL nvim
 set -x EDITOR nvim

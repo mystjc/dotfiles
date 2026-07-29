@@ -2,25 +2,19 @@ format = """
 $directory\
 $git_branch\
 $git_status\
-$fill\
 $cmd_duration\
 $line_break\
 $character
 """
 
-[fill]
-symbol = " "
-
 [character]
 success_symbol = "[❯](bold green)"
 error_symbol = "[❯](bold red)"
-vimcmd_symbol = "[❮](bold green)"
+vimcmd_symbol = "[❮](bold yellow)"
 
 [directory]
 format = "[$path]($style) "
 style = "bold blue"
-truncation_length = 3
-truncation_symbol = "…/"
 truncate_to_repo = false
 
 [git_branch]
@@ -36,12 +30,12 @@ ahead = "[↑${count} ](bold green)"
 behind = "[↓${count} ](bold red)"
 diverged = ""
 untracked = "​"
-stashed = "[≡ ]"
+stashed = "[≡ ](bold cyan)"
 modified = "​"
 staged = "​"
 renamed = "​"
 deleted = "​"
 
 [cmd_duration]
-format = "[ $duration]($style)"
-style = "bold yellow"
+format = "[$duration]($style)"
+style = "yellow"
