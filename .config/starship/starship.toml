@@ -8,29 +8,29 @@ $character
 """
 
 [character]
-success_symbol = "[❯](bold green)"
-error_symbol = "[❯](bold red)"
-vimcmd_symbol = "[❮](bold yellow)"
+success_symbol = "[❯](bright-green)"
+error_symbol = "[❯](bright-red)"
+vimcmd_symbol = "[❮](bright-yellow)"
 
 [directory]
 format = "[$path]($style) "
-style = "bold blue"
+style = "bright-blue"
 truncate_to_repo = false
 
 [git_branch]
 format = "[$symbol $branch]($style)"
-style = "bold purple"
+style = "bright-purple"
 symbol = "󰊢"
 
 [git_status]
 format = "[(•$conflicted$untracked$modified$staged$renamed$deleted) ($stashed$ahead_behind)]($style)"
-style = "bold purple"
+style = "bright-purple"
 conflicted = "​"
-ahead = "[↑${count} ](bold green)"
-behind = "[↓${count} ](bold red)"
+ahead = "[↑${count} ](bright-green)"
+behind = "[↓${count} ](bright-red)"
 diverged = ""
 untracked = "​"
-stashed = "[≡ ](bold cyan)"
+stashed = "[≡ ](bright-cyan)"
 modified = "​"
 staged = "​"
 renamed = "​"
@@ -38,4 +38,4 @@ deleted = "​"
 
 [cmd_duration]
 format = "[$duration]($style)"
-style = "yellow"
+style = "italic yellow"
