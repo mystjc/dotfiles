@@ -3,9 +3,9 @@ set fish_greeting
 
 # Syntax highlighting
 set fish_color_normal normal
-set fish_color_command magenta
+set fish_color_command blue
 set fish_color_builtin blue
-set fish_color_function magenta
+set fish_color_function blue
 set fish_color_keyword magenta
 set fish_color_quote green
 set fish_color_redirection yellow
