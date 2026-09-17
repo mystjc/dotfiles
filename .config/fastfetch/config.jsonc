@@ -20,7 +20,7 @@
     {
       "type": "os",
       "format": "{3} {12}",
-      "key": "󰟀 OS",
+      "key": " OS",
     },
     {
       "type": "kernel",
@@ -57,7 +57,7 @@
     {
       "type": "host",
       "format": "{5} {2}",
-      "key": "󱤓 Host",
+      "key": "󰟀 Host",
     },
     {
       "type": "cpu",
@@ -74,7 +74,7 @@
     },
     {
       "type": "memory",
-      "key": " RAM",
+      "key": " RAM",
     },
     {
       "type": "disk",
