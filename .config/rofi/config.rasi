@@ -12,6 +12,7 @@ configuration {
   foreground:   #b3c8e1;
   background:   #2b3947;
   search-bg:    #242f3b;
+  selected-fg:  #c2ddff;
   selected-bg:  #4586c4;
 
   cursor: "default";
@@ -76,6 +77,7 @@ element.selected {
 }
 
 element-text.selected {
+  text-color: @selected-fg;
   background-color: @selected-bg;
 }
 
