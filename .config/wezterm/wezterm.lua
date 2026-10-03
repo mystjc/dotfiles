@@ -28,7 +28,7 @@ config.tab_bar_at_bottom = true
 config.tab_max_width = 64
 
 -- Misc.
-config.enable_wayland = false
+config.enable_wayland = true
 config.enable_kitty_keyboard = true
 config.default_cursor_style = "SteadyBar"
 config.window_close_confirmation = "NeverPrompt"
